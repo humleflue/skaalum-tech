@@ -1,0 +1,37 @@
+{
+  "name": "skaalum-tech",
+  "version": "1.0.0",
+  "description": "Lasses legeplads",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "node_modules\\.bin\\tape tests/**/*.js | node_modules\\.bin\\tap-spec",
+    "rmlogs": "node rmlogs.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/humleflue/skaalum-tech.git"
+  },
+  "author": "Lasse D. Skaalum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/humleflue/skaalum-tech/issues"
+  },
+  "homepage": "https://github.com/humleflue/skaalum-tech#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "rimraf": "^3.0.2",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^5.0.1",
+    "tape-promise": "^4.0.0"
+  }
+}
