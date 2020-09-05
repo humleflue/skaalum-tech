@@ -1,0 +1,149 @@
+body {
+    background-image: url("../img/gaming\ wallpaper.png");
+	background-size:  cover;
+	margin:           auto;
+	padding:          0;
+}
+
+html {
+	overflow-y: hidden; 
+	overflow-x: hidden;
+}
+
+.clearfix:after {
+    display:block;
+    clear:both;
+}
+
+#freetime {
+	width:350px;
+	float: left;
+	display: block;
+	position:absolute;
+	top:58%;
+}
+
+.flex-container {
+	display: flex;
+	position:absolute;
+	top:1%;
+	left:0.5%;
+}
+
+.flex-container>div {
+  margin: 5px;
+}
+
+.icon {
+	width:55px;
+}
+
+#school {
+	border-style:dotted;
+	background-color:white;
+	width:64px;
+	position:absolute;
+	top:52%;
+	left:48.1%;
+}
+
+#clock {
+	position:absolute;
+	top:1%;
+	right:1%;
+}
+
+#dmi {
+	opacity:0;
+	width: 186px;
+	height: 72px;
+	position: absolute;
+	top:1%;
+	right:1%;
+}
+
+/*----- Menu Outline -----*/
+.menu-wrap {
+    width:100%;
+    margin:auto;
+    box-shadow:0px 1px 3px rgba(0,0,0,0.2);
+    background:#3e3436;
+}
+ 
+.menu {
+    width:49%;
+	margin:auto;
+	list-style:none;
+}
+ 
+.menu li {
+	margin:auto;
+}
+ 
+.menu a {
+    color:rgb(110,110,110);
+	text-decoration:none;
+	font-weight:bold;
+	text-decoration:none; 
+}
+ 
+.menu li:hover > a, .menu .current-item > a {
+    text-decoration:none;
+    color:white;
+}
+ 
+.menu .arrow {
+    font-size:11px;
+    line-height:0%;
+}
+
+/*----- Top Level -----*/
+.menu > ul > li {
+    float:left;
+    display:inline-block;
+    position:relative;
+    font-size:19px;
+}
+ 
+.menu > ul > li > a {
+    padding:10px 40px;
+    display:inline-block;
+    text-shadow:0px 1px 0px rgba(0,0,0,0.4);
+}
+ 
+.menu > ul > li:hover > a, .menu > ul > .current-item > a {
+    background:black;
+}
+ 
+/*----- Bottom Level -----*/
+.menu li:hover .sub-menu {
+    z-index:1;
+    opacity:1;
+}
+ 
+.sub-menu {
+    width:160%;
+    padding:5px 0px;
+    position:absolute;
+    top:100%;
+    left:0px;
+    z-index:-1;
+    opacity:0;
+    transition:opacity linear 0.15s;
+    box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+    background:rgb(20,20,20);
+}
+ 
+.sub-menu li {
+    display:block;
+    font-size:16px;
+}
+ 
+.sub-menu li a {
+    padding:10px 30px;
+    display:block;
+}
+ 
+.sub-menu li a:hover, .sub-menu .current-item a {
+    background:#3e3436;
+}

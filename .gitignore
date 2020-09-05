@@ -99,6 +99,7 @@ Thumbs.db
 *.der
 *.key
 *.pem
+server_settings.js
 server_settings.json
 
 # -------------------------

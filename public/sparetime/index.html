@@ -1,0 +1,104 @@
+﻿<!DOCKTYPE html>
+<html>
+<head>
+	<title>Fritid</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="static/css/sparetime.css">
+	<link rel="shortcut icon" href="static/img/favicon.ico">
+	<script src="static/js/sparetime.js"></script>
+	<script src="static/js/jquery.js"></script>
+<!-- Balldrop JS -->
+	<script language="JavaScript1.2">
+		<!-- Begin
+		function BrowserCheck() {
+			var b = navigator.appName;
+			if (b == "Netscape") this.b = "NS";
+			else if (b == "Microsoft Internet Explorer") this.b = "IE";
+			else this.b = b;
+			this.v = parseInt(navigator.appVersion);
+			this.NS = (this.b == "NS" && this.v>=4);
+			this.NS4 = (this.b == "NS" && this.v == 4);
+			this.NS5 = (this.b == "NS" && this.v == 5);
+			this.IE = (this.b == "IE" && this.v>=4);
+			this.IE4 = (navigator.userAgent.indexOf('MSIE 4')>0);
+			this.IE5 = (navigator.userAgent.indexOf('MSIE 5')>0);
+			if (this.IE5 || this.NS5) this.VER5 = true;
+			if (this.IE4 || this.NS4) this.VER4 = true;
+			this.OLD = (! this.VER5 && ! this.VER4) ? true : false;
+			this.min = (this.NS||this.IE);
+			}
+		is = new BrowserCheck();
+		//  End -->
+	</script>
+</head>
+<body onload="timeout()">
+	<div class="menu-wrap">
+		<nav class="menu">
+			<ul class="clearfix">
+				<li>
+					<a href="#">League of Legends <span class"arrow">&#9660;<span></a>
+						<ul class="sub-menu">
+							<li><a href="http://www.championselect.net/">ChampionSelect</a></li>
+							<li><a href="http://www.lolking.net/summoner/euw/32050618">LoL King</a></li>
+							<li><a href="http://euw.op.gg/summoner/userName=BoostedFeedl0rd">OPGG</a></li>
+							<li><a href="http://www.lolskill.net/game/EUW/BoostedFeedl0rd">LoL Skill</a></li>
+							<li><a href="http://www.lolnexus.com/EUW/search?name=BoostedFeedl0rd&region=EUW">LoL Nexus</a></li>
+						</ul>
+				</li>
+				<li>
+					<a href="#">Andre spil <span class"arrow">&#9660;<span></a>
+						<ul class="sub-menu">
+							<li><a href="https://www.riftherald.com/2019/6/24/18701053/tft-guide-items-champions">TFT: Items</a></li>
+							<li><a href="http://csgo-stats.com/dinmorianden/">CS:GO: Stats</a></li>
+							<li><a href="http://platinumgod.co.uk/">Isaac: Platinum God
+							<li><a href="http://bindingofisaacrebirth.gamepedia.com/Binding_of_Isaac:_Rebirth_Wiki">Isaac: Wiki</a></li>
+							<li><a href="http://bindingofisaacrebirth.gamepedia.com/Item_Pool#Devil_Room">Isaac: Item Pool</a></li>
+							<li><a href="https://pubg.op.gg/user/humleflue?server=eu">PUBG OP.GG</a></li>
+						</ul>
+				</li>
+				<li>
+					<a href="#">Ulovligheder <span class"arrow">&#9660;<span></a>
+						<ul class="sub-menu">
+							<li><a href="http://offliberty.com/">Offliberty</a></li>
+							<li><a href="https://proxybay.la/">The Proxy Bay</a></li>
+						</ul>
+				</li>
+				<li>
+					<a href="#">Værktøjer <span class"arrow">&#9660;<span></a>
+						<ul class="sub-menu">
+							<li><a href="https://calendar.google.com/calendar/">Google Kalender</a></li>
+							<li><a href="https://www.virustotal.com/en/">Malware scan</a></li>
+							<li><a href="https://nightdev.com/twitchcast/">Chromecast: Twitch</a></li>
+						</ul>
+				</li>
+			</ul>
+		</nav>
+	</div>
+<!-- iFrames -->
+	<iframe id="clock" src="http://free.timeanddate.com/clock/i56gspq2/n1405/tldk13/fn7/fs18/fcfff/tct/pct/ftb/bacfff/pa10/tt0/tw1/tm1/ts1/tb4" frameborder="1" width="186" height="72" allowTransparency="true"></iframe>
+<!-- dmi link -->
+	<a href="https://www.dmi.dk/lokation/show/DK/2624886/Aalborg/" target="_blank"><img id="dmi" src="static/img/icons/facebook.png"></a>
+<!-- Pictures -->
+	<img id="freetime" src="static/img/free time.png" alt="Free Time">
+<!-- Icons -->
+	<div class="flex-container">
+		<div><a href="https://www.facebook.com/" target="_blank"><img class="icon" src="static/img/icons/facebook.png"></a></div>
+		<div><a href="https://www.reddit.com/" target="_blank"><img class="icon" src="static/img/icons/reddit.png"></a></div>
+		<div><a href="https://www.twitch.tv/directory" target="_blank"><img class="icon" src="static/img/icons/twitch.png"></a></div>
+		<div><a href="https://www.netflix.com/browse"><img class="icon" src="static/img/icons/netflix.png"></a></div>
+		<div><a href="https://viaplay.dk/watching"><img class="icon" src="static/img/icons/viaplay.png"></a></div>
+		<div><a href="http://getvideostream.com/"><img class="icon" src="static/img/icons/videostream.png"></a></div>
+		<div><a href="https://unicodey.com/emoji-data/table.htm"><img class="icon" src="static/img/icons/emoji.png"></a></div>
+	</div>
+<!-- Balldrop -->
+	<center>
+		<div id="staticBall" style="position:relative;visibility:visible;display:none;">
+			<img src="static/img/balls/kurt.png" height=300 width=300 alt="Static ball">
+		</div>
+	</center>
+	<div id="ball" style="visibility:hidden; position:absolute; left:100; top:10; height:34; width:34">
+		<img src="static/img/balls/kurt.png" height=300 width=300 alt="Bouncing ball">
+	</div>
+	<script language="Javascript1.2" src="static/js/balldrop.js"></script>
+</body>
+</html>

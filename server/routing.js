@@ -5,8 +5,6 @@ const HTTPError = require(`./helpers/HTTPError`);
 module.exports = (express, app) => {
   const publicDir = path.join(__dirname, `..`, `public`);
 
-  app.get(`/`, (req, res) => res.sendFile(path.join(publicDir, `index.html`)));
-
   // For testing error handling
   const errorDir = path.join(publicDir, `error`);
   app.get(`/error`, (req, res) => res.sendFile(path.join(errorDir, `error.html`)));

@@ -34,7 +34,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 /* Routing */
-app.use(express.static(path.join(__dirname, `public`), { index: false })); // Serves all static files (js, css etc.)
+app.use(express.static(path.join(__dirname, `public`))); // Serves all static files (js, css etc.)
 handleRoutes(express, app);
 handleErrors(express, app);
 app.use((req, res) => res.sendStatus(404)); // Handles non-existing URL-requests. Has to be the last line before app.listen.
