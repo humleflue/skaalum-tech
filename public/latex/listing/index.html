@@ -10,16 +10,16 @@
         <script src="/static/js/code/prism.js"></script>
 	</head>
 	<body class="line-numbers">
-<h1>LaTeX code for code-snippet support for your LaTeX preamble</h1>
+  <h1>Listing support for your LaTeX preamble</h1>
 
-<h2>General stuff</h2>
+  <h2>General stuff</h2>
 
-<h3>Packages</h3>
-<pre><code class="language-latex">\usepackage{listings}
+  <h3>Packages</h3>
+  <pre><code class="language-latex">\usepackage{listings}
 \usepackage{color}</code></pre>
 
-<h3>lstset</h3>
-<pre><code class="language-latex">\renewcommand{\lstlistingname}{Code Snippet} % Listing -> Code Snippet
+  <h3>lstset</h3>
+  <pre><code class="language-latex">\renewcommand{\lstlistingname}{Code Snippet} % Listing -> Code Snippet
 \definecolor{lighter-gray}{RGB}{240,240,240}
 
 \lstset{
@@ -35,12 +35,12 @@
    breaklines=true,
    showtabs=false,
    captionpos=b
-}</code></pre>
+  }</code></pre>
 
-<h2>lstdefinelanguage</h2>
+  <h2>lstdefinelanguage</h2>
 
-<h3>C#</h3>
-<pre><code class="language-latex">\usepackage{courier}
+  <h3>C#</h3>
+  <pre><code class="language-latex">\usepackage{courier}
 \definecolor{Green}{rgb}{0, 0.3, 0}
 \definecolor{DarkCyan}{rgb}{0, 0.545, 0.545}
 \definecolor{Navy}{rgb}{0, 0, 0.5}
@@ -100,10 +100,10 @@
   keywordstyle=[16]\color{SaddleBrown},
   morekeywords=[17]{null, value},
   keywordstyle=[17]\bfseries,
-}</code></pre>
+  }</code></pre>
 
-<h3>JavaScript</h3>
-<pre><code class="language-latex">\definecolor{dkgreen}{rgb}{0,0.6,0}
+  <h3>JavaScript</h3>
+  <pre><code class="language-latex">\definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 
 \def\bluecolorifnotalreadymauve{%
@@ -129,10 +129,10 @@
   stringstyle=\color{mauve}\ttfamily,
   keywordstyle=\bluecolorifnotalreadymauve,
   sensitive=true
-}</code></pre>
+  }</code></pre>
 
-<h3>HTML</h3>
-<pre><code class="language-latex">\lstdefinelanguage{HTML}{
+  <h3>HTML</h3>
+  <pre><code class="language-latex">\lstdefinelanguage{HTML}{
     sensitive=true,
     keywords={%
     % JavaScript
@@ -154,7 +154,7 @@
     morestring=[b]",    
     alsoletter={-},
     alsodigit={:}
-}</code></pre>
+  }</code></pre>
 
 	</body>
 </html>
