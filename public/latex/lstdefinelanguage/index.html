@@ -10,10 +10,34 @@
         <script src="/static/js/code/prism.js"></script>
 	</head>
 	<body class="line-numbers">
-<h1>Here's some lstdefinelanguage for your LaTeX preamble</h1>
-<h3>General packages which should always be included</h3>
+<h1>LaTeX code for code-snippet support for your LaTeX preamble</h1>
+
+<h2>General stuff</h2>
+
+<h3>Packages</h3>
 <pre><code class="language-latex">\usepackage{listings}
 \usepackage{color}</code></pre>
+
+<h3>lstset</h3>
+<pre><code class="language-latex">\renewcommand{\lstlistingname}{Code Snippet} % Listing -> Code Snippet
+\definecolor{lighter-gray}{RGB}{240,240,240}
+
+\lstset{
+   backgroundcolor=\color{lighter-gray},
+   extendedchars=true,
+   basicstyle=\footnotesize\ttfamily,
+   showstringspaces=false,
+   showspaces=false,
+   numbers=left,
+   numberstyle=\footnotesize,
+   numbersep=9pt,
+   tabsize=2,
+   breaklines=true,
+   showtabs=false,
+   captionpos=b
+}</code></pre>
+
+<h2>lstdefinelanguage</h2>
 
 <h3>C#</h3>
 <pre><code class="language-latex">\usepackage{courier}
