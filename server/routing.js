@@ -5,8 +5,8 @@ const HTTPError = require(`./helpers/HTTPError`);
 module.exports = (express, app) => {
   const publicDir = path.join(__dirname, `..`, `public`);
 
-  /* CV */
-  app.get(`/cv`, (req, res) => res.sendFile(path.join(publicDir, `cv`, `cvdanish.pdf`)));
+  // CV
+  app.get(`/cv.pdf`, (req, res) => res.sendFile(path.join(publicDir, `cv`, `cvdanish.pdf`)));
 
   /* LaTeX */
   // Redirect from old url to new url
