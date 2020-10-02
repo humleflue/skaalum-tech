@@ -6,7 +6,7 @@ module.exports = (express, app) => {
   const publicDir = path.join(__dirname, `..`, `public`);
 
   // CV
-  app.get(`/cv`, (req, res) => res.sendFile(path.join(publicDir, `cv`, `cvdanish.pdf`)));
+  app.get(`/cv.pdf`, (req, res) => res.sendFile(path.join(publicDir, `cv`, `cvdanish.pdf`)));
 
   // For testing error handling
   const errorDir = path.join(publicDir, `error`);
