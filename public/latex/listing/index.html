@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>Skaalum</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Lasse D. Skaalum">
+        <meta name="description" content="Denne hjemmeside bruges af Lasse D. Skaalum til alt muligt sjovt.">
+        <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/code/prism.css">
+        <script src="/static/js/code/prism.js"></script>
+	</head>
+	<body class="line-numbers">
+  <h1>Listing support for your LaTeX preamble</h1>
+
+  <h2>General stuff</h2>
+
+  <h3>Packages</h3>
+  <pre><code class="language-latex">\usepackage{listings}
+\usepackage{color}</code></pre>
+
+  <h3>lstset</h3>
+  <pre><code class="language-latex">\renewcommand{\lstlistingname}{Code Snippet} % Listing -> Code Snippet
+\definecolor{lighter-gray}{RGB}{240,240,240}
+
+\lstset{
+   backgroundcolor=\color{lighter-gray},
+   extendedchars=true,
+   basicstyle=\footnotesize\ttfamily,
+   showstringspaces=false,
+   showspaces=false,
+   numbers=left,
+   numberstyle=\footnotesize,
+   numbersep=9pt,
+   tabsize=2,
+   breaklines=true,
+   showtabs=false,
+   captionpos=b
+  }</code></pre>
+
+  <h2>lstdefinelanguage</h2>
+
+  <h3>C#</h3>
+  <pre><code class="language-latex">\usepackage{courier}
+\definecolor{Green}{rgb}{0, 0.3, 0}
+\definecolor{DarkCyan}{rgb}{0, 0.545, 0.545}
+\definecolor{Navy}{rgb}{0, 0, 0.5}
+\definecolor{Teal}{rgb}{0, 0.5, 0.5}
+\definecolor{DarkGray}{gray}{0.66}
+\definecolor{Olive}{rgb}{0.5, 0.5, 0}
+\definecolor{Pink}{rgb}{1.0, 0.75, 0.8}
+\definecolor{DeepPink}{rgb}{1, 0.08, 0.58}
+\definecolor{Brown}{rgb}{0.65, 0.165, 0.165}
+\definecolor{DarkViolet}{rgb}{0.58, 0, 0.83}
+\definecolor{SaddleBrown}{rgb}{0.55, 0.27, 0.07}
+\lstdefinelanguage{CSharp}{
+  morecomment = [l]{//}, 
+  morecomment = [l]{///},
+  morecomment = [s]{/*}{*/},
+  morestring=[b]", 
+  morestring=[b]',
+  basicstyle=\footnotesize\ttfamily,
+  commentstyle=\color{Green}\textit,
+  stringstyle=\color{blue},
+  sensitive = true,
+  morekeywords=[1]{this, base},
+  keywordstyle=[1]\bfseries,
+  morekeywords=[2]{as, is, new, sizeof, typeof, true, false, stackalloc},
+  keywordstyle=[2]\color{DarkCyan}\bfseries,
+  morekeywords=[3]{else, if, switch, case, default,
+  do, for, foreach, while, in},
+  keywordstyle=[3]\color{blue}\bfseries ,
+  morekeywords=[4]{break, continue, goto, return,
+  yield, partial, global, where},
+  keywordstyle=[4]\color{Navy},
+  morekeywords=[5]{try, throw, catch, finally},
+  keywordstyle=[5]\color{Teal}\bfseries,
+  morekeywords=[6]{checked, unchecked},
+  keywordstyle=[6]\color{DarkGray}\bfseries,
+  morekeywords=[7]{fixed, unsafe},
+  keywordstyle=[7]\color{Olive},
+  morekeywords=[8]{bool, byte, sbyte, char, short, ushort, int, uint, long, ulong, float,
+  double, decimal, enum, struct},
+  keywordstyle=[8]\bfseries\color{red},
+  morekeywords=[9]{class, interface, delegate, object, string,
+  void},
+  keywordstyle=[9]\color{red},
+  morekeywords=[10]{explicit, implicit, operator},
+  keywordstyle=[10]\color{Pink}\bfseries,
+  morekeywords=[11]{params, ref, out},
+  keywordstyle=[11]\bfseries\color{DeepPink},
+  morekeywords=[12]{private, protected, internal, public},
+  keywordstyle=[12]\bfseries\color{blue},
+  morekeywords=[13]{abstract, const, event, var, override, virtual, volatile, extern, readonly, sealed, static},
+  keywordstyle=[13]\color{Brown},
+  morekeywords=[14]{namespace, using},
+  keywordstyle=[14]\bfseries\color{Green},
+  morekeywords=[15]{lock},
+  keywordstyle=[15]\color{DarkViolet},
+  morekeywords=[16]{get, set, add, remove},
+  keywordstyle=[16]\color{SaddleBrown},
+  morekeywords=[17]{null, value},
+  keywordstyle=[17]\bfseries,
+  }</code></pre>
+
+  <h3>JavaScript</h3>
+  <pre><code class="language-latex">\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\def\bluecolorifnotalreadymauve{%
+    \extractcolorspec{.}\currentcolor
+    \extractcolorspec{mauve}\stringcolor
+    \ifx\currentcolor\stringcolor\else
+        \color{blue}%
+    \fi
+}
+
+\lstdefinelanguage{JavaScript}{
+  keywords={break, case, catch, continue, debugger, default, delete, do, else, false, finally, for, function, if, in, instanceof, new, null, return, switch, this, throw, true, try, typeof, var, void, while, with},
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  moredelim=[s][\color{black}]{\$\{}{\}}, % same as morestring in this case
+  morestring=[d]{\\"},
+  morestring=**[d]{"},
+  morestring=**[d]{`},
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  keywordstyle=\color{blue}\bfseries,
+  identifierstyle=\color{black},
+  commentstyle=\color{dkgreen}\ttfamily,
+  stringstyle=\color{mauve}\ttfamily,
+  keywordstyle=\bluecolorifnotalreadymauve,
+  sensitive=true
+  }</code></pre>
+
+  <h3>HTML</h3>
+  <pre><code class="language-latex">\lstdefinelanguage{HTML}{
+    sensitive=true,
+    keywords={%
+    % JavaScript
+    typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break,
+    % HTML
+    html, title, meta, style, head, body, script, canvas,
+    % CSS
+    border:, transform:, -moz-transform:, transition-duration:, transition-property:,
+    transition-timing-function:
+    },
+    % http://texblog.org/tag/otherkeywords/
+    otherkeywords={<, >, \/},   
+    ndkeywords={class, export, boolean, throw, implements, import, this},   
+    comment=[l]{//},
+    % morecomment=[s][keywordstyle]{<}{>},  
+    morecomment=[s]{/*}{*/},
+    morecomment=[s]{<!}{>},
+    morestring=[b]',
+    morestring=[b]",    
+    alsoletter={-},
+    alsodigit={:}
+  }</code></pre>
+
+	</body>
+</html>

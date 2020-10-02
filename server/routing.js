@@ -8,7 +8,11 @@ module.exports = (express, app) => {
   // CV
   app.get(`/cv.pdf`, (req, res) => res.sendFile(path.join(publicDir, `cv`, `cvdanish.pdf`)));
 
-  // For testing error handling
+  /* LaTeX */
+  // Redirect from old url to new url
+  app.get(`/latex/lstdefinelanguage`, (req, res) => res.redirect(`/latex/listing`));
+
+  /* For testing error handling */
   const errorDir = path.join(publicDir, `error`);
   app.get(`/error`, (req, res) => res.sendFile(path.join(errorDir, `error.html`)));
   app.get(`/error/intended`, () => {
