@@ -131,29 +131,46 @@
   sensitive=true
 }</code></pre>
 
-  <h3>HTML</h3>
-  <pre><code class="language-latex">\lstdefinelanguage{HTML}{
-    sensitive=true,
-    keywords={%
-    % JavaScript
-    typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break,
-    % HTML
-    html, title, meta, style, head, body, script, canvas,
-    % CSS
-    border:, transform:, -moz-transform:, transition-duration:, transition-property:,
-    transition-timing-function:
-    },
-    % http://texblog.org/tag/otherkeywords/
-    otherkeywords={<, >, \/},   
-    ndkeywords={class, export, boolean, throw, implements, import, this},   
-    comment=[l]{//},
-    % morecomment=[s][keywordstyle]{<}{>},  
-    morecomment=[s]{/*}{*/},
-    morecomment=[s]{<!}{>},
-    morestring=[b]',
-    morestring=[b]",    
-    alsoletter={-},
-    alsodigit={:}
+  <h3>HTML</h3> <!-- ' &lt; ' means ' < ' -->
+  <pre><code class="language-latex">\lstdefinelanguage{HTML5}{
+  language=html,
+  sensitive=true,	
+  alsoletter={<>=-},	
+  morecomment=[s]{<!-}{-->},
+  tag=[s],
+  otherkeywords={
+    % General
+    >,
+    % Standard tags
+    &lt;!DOCTYPE,
+    &lt;/html, &lt;html, &lt;head, &lt;title, &lt;/title, &lt;style, &lt;/style, &lt;link, &lt;/head, &lt;meta, />,
+    % body
+    &lt;/body, &lt;body,
+    % Divs
+    &lt;/div, &lt;div, &lt;/div>, 
+    % Headers
+    &lt;/h1, &lt;h1, &lt;/h2, &lt;h2, &lt;/h3, &lt;h3, &lt;/h4, &lt;h4, &lt;/h5, &lt;h5, &lt;/h6, &lt;h6,
+    % Paragraphs
+    &lt;/p, &lt;p, &lt;/p>,
+    % scripts
+    &lt;/script, &lt;script,
+    % More tags...
+    &lt;canvas, /canvas>, &lt;svg, &lt;rect, &lt;animateTransform, &lt;/rect>, &lt;/svg>, &lt;video, &lt;source, &lt;iframe, &lt;/iframe>, &lt;/video>, &lt;image, &lt;/image>, &lt;header, &lt;/header, &lt;article, &lt;/article
+  },
+  ndkeywords={
+    % General
+    =,
+    % HTML attributes
+    charset=, src=, id=, width=, height=, style=, type=, rel=, href=,
+    % SVG attributes
+    fill=, attributeName=, begin=, dur=, from=, to=, poster=, controls=, x=, y=, repeatCount=, xlink:href=,
+    % properties
+    margin:, padding:, background-image:, border:, top:, left:, position:, width:, height:, margin-top:, margin-bottom:, font-size:, line-height:,
+    % CSS3 properties
+    transform:, -moz-transform:, -webkit-transform:,
+    animation:, -webkit-animation:,
+    transition:,  transition-duration:, transition-property:, transition-timing-function:,
+  }
 }</code></pre>
 
 	</body>
