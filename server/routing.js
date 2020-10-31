@@ -8,9 +8,9 @@ module.exports = (express, app) => {
   // CV
   app.get(`/cv.pdf`, (req, res) => res.sendFile(path.join(publicDir, `cv`, `cvdanish.pdf`)));
 
-  /* LaTeX */
-  // Redirect from old url to new url
+  // Redirects
   app.get(`/latex/lstdefinelanguage`, (req, res) => res.redirect(`/latex/listing`));
+  app.get(`/dw`, (req, res) => res.redirect(`/damsgaard-writing`));
 
   /* For testing error handling */
   const errorDir = path.join(publicDir, `error`);
