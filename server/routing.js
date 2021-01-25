@@ -1,16 +1,16 @@
 const path = require(`path`);
 
 const HTTPError = require(`./helpers/HTTPError`);
+const publicDir = path.join(__dirname, `..`, `public`);
 
 module.exports = (express, app) => {
-  const publicDir = path.join(__dirname, `..`, `public`);
-
   // CV
   app.get(`/cv.pdf`, (req, res) => res.sendFile(path.join(publicDir, `cv`, `cvdanish.pdf`)));
 
   // Redirects
   app.get(`/latex/lstdefinelanguage`, (req, res) => res.redirect(`/latex/listing`));
   app.get(`/dw`, (req, res) => res.redirect(`/damsgaard-writing`));
+  app.get(`/cv`, (req, res) => res.redirect(`/cv.pdf`));
 
   /* For testing error handling */
   const errorDir = path.join(publicDir, `error`);
